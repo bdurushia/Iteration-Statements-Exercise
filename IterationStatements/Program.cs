@@ -97,6 +97,14 @@
         }
 
         //Write a method to display the multiplication table(from 1 to 12) of a given integer
+        public static void MultiplicationTable(int userNum4)
+        {
+            for (int i = 1; i <= 12; i++)
+            {
+                Console.WriteLine($"{i} x {userNum4} = {(userNum4 * i)}");
+            }
+        }
+
 
 
         //Call the methods to test them in the Main method below
@@ -128,10 +136,15 @@
             // Call Method 6
             CanVote();
 
-            // Prompt and call Method 7
+            // Prompt and Call Method 7
             Console.Write("\nEnter a number, negative or positive: ");
             int userNum3 = int.Parse(Console.ReadLine());
             CheckInRange(userNum3);
+
+            // Prompt and Call Method 8
+            Console.Write("\nEnter a number to display it's multiplication table: ");
+            int userNum4 = int.Parse(Console.ReadLine());
+            MultiplicationTable(userNum4);
         }
     }
 }
